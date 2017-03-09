@@ -8,7 +8,10 @@ var mongoose = require('mongoose');
 var cors = require('cors');
 
 //DB Setup
-
+mongoose.connect('mongodb://ds127190.mlab.com:27190/heroku_n7d81bhj', function(err){
+  if(err) { console.log(err)}
+  else {console.log('mongo connected');}
+});
 
 var index = require('./routes/index');
 var membership = require('./routes/membership');
