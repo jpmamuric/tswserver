@@ -7,10 +7,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var cors = require('cors');
 
-const CONFIG    = require('./config');
-
 //DB Setup
-mongoose.connect(process.env.MONGODB_URI);
+
 
 var index = require('./routes/index');
 var membership = require('./routes/membership');
