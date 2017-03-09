@@ -10,7 +10,7 @@ var cors = require('cors');
 const CONFIG    = require('./config');
 
 //DB Setup
-mongoose.connect('mongodb://admin:'+CONFIG.dbPassword+'@ds111559.mlab.com:11559/tswfire');
+mongoose.connect(process.env.MONGODB_URI);
 
 var index = require('./routes/index');
 var membership = require('./routes/membership');
